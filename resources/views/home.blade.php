@@ -19,7 +19,6 @@
                     <table class="table table-bordered emp-data-table">
                         <thead>
                             <tr>
-                                <th>No</th>
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Address</th>
@@ -28,6 +27,16 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach($clients as $client)
+                                <tr>
+                                    <td>{{ $client->name }}</td>
+                                    <td>{{ $client->email }}</td>
+                                    <td>{{ $client->address }}</td>
+                                    <td>{{ $client->city}}</td>
+                                    <td>{!! html_entity_decode($client->notes)!!}</td>
+                                </tr>
+                            @endforeach
+                           
                         </tbody>
                     </table>
                 </div>
