@@ -2,4 +2,4 @@
 
 
 composer install
-phh artisan migrate --seed
+php artisan migrate --seed
